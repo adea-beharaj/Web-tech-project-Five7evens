@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #cfefff, #eaf6ff);
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    color: #333;
+}
+
+/* Main layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Each card */
+.card {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Image section */
+.img-wrapper {
+    width: 40%;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content */
+.content {
+    padding: 20px;
+    width: 60%;
+}
+
+/* Info box spacing */
+.info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Price styling */
+.price {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff4f8b;
+}
+
+/* Responsive (important) */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .img-wrapper,
+    .content {
+        width: 100%;
+    }
+}

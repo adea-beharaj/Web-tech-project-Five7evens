@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <title>Five 7evens Agency</title>
+    <link rel="stylesheet" href="styles/bookingForm.css">
+    <link rel="stylesheet" href="styles/header.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/bookingForm.js"></script>
+</head>
+
+<body style="background: url('picture/panorama.jpg') no-repeat center center fixed; background-size: cover; margin: 0; padding-top: 130px;">
+<header class="page-header">
+    <div class="myLogo">
+        <img src="picture/logo.png" alt="Five 7evens logo">
+    </div>
+    <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="bookingForm.html">Create Booking</a>
+    </nav>
+</header>
+<section id="booking" class="booking">
+    <div class="container">
+        <h2 class="section-title">Book Your Adventure!</h2>
+        
+        <form id="booking-form">
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <span class="error-message" id="name-error"></span>
+            </div>
+            
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" id="email" placeholder="your@email.com">
+                <span class="error-message" id="email-error"></span>
+            </div>
+            
+            <div class="form-group">
+                <label>Package *</label>
+                <select id="destination">
+                    <option value="">Choose a package</option>
+                    <option value="paris">Paris, France</option>
+                    <option value="bali">Bali, Indonesia</option>
+                    <option value="nyc">New York, USA</option>
+                    <option value="tokyo">Tokyo, Japan</option>
+                    <option value="rome">Rome, Italy</option>
+                    <option value="dubai">Dubai, UAE</option>
+
+                </select>
+                <span class="error-message" id="destination-error"></span>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Travel Date *</label>
+                    <input type="date" id="date">
+                    <span class="error-message" id="date-error"></span>
+                </div>
+                <div class="form-group">
+                    <label>Guests *</label>
+                    <input type="number" id="guests" min="1" max="20" value="1">
+                    <span class="error-message" id="guests-error"></span>
+                </div>
+            </div>
+            
+            <button type="submit">Book Now →</button>
+            <div id="form-message"></div>
+            <div id="bookings-list"></div>
+        </form>
+        
+        <div id="recent-booking"></div>
+    </div>
+</section>
+</body>
+</html>
